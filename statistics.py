@@ -1,36 +1,26 @@
 import math
 
-class mailNotification:
-    def __init__(self, mailSent=True):
-        self.mailSent = mailSent
 
 
+class EmailAlert:
+    def __init__(self, emailSent=True):
+        self.emailSent = emailSent
+        
+    def alert():
+        self.emailSent = True
 
-   def notification():
-        self.mailSent = True
-
-
-
-
-class ledNotification:
+class LEDAlert:
     def __init__(self, ledGlows=True):
         self.ledGlows = ledGlows
-
-
-
-   def notification():
+        
+    def alert():
         self.ledGlows = True
 
-
-
-class statsNotification:
+class StatsAlerter:
     def __init__(self, v1, v2):
         self.maxThreshold = v1
         self.list = v2
-
-
-
-   def validateAndNotify(self, v):
+    def checkAndAlert(self, v):
         val = max(v)
         if val > self.maxThreshold:
             self.list[0].emailSent = True
