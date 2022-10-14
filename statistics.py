@@ -1,3 +1,3 @@
 
-def calculateStats(numbers):
+def calculateSstats(numbers):
   return None
